@@ -1,6 +1,6 @@
 # Challenge
 
-Compare the performance on asynchronous and synchronous architectures for Machine Learning deployment models and understanding where the performance delta comes from.
+Compare the performance on asynchronous and synchronous architectures for Machine Learning deployment real-time models and understanding where the performance delta comes from.
 
 # Architectures
 
@@ -10,13 +10,13 @@ Note than, both the data obtained from Redis and the predictions of the models a
 
 Please, take a look to the architecture images. We use 4 different Docker images (scoring handler, feature store, and 2 APIs models). Also, you can follow the communication flow through the numbers.
 
-### Sync
+### Synchronous architecture
 
 ![Max Performance Sync](doc/architecture_sync.jpg)
 
 **Note:** The synchronous architecture use Flask as API web framework for both `api_scoring` and `api_model`.
 
-### Async
+### Asynchronous architecture
 
 ![Max Performance Sync](doc/architecture_async.jpg)
 
@@ -156,10 +156,10 @@ We compare graphically the rate of response time on async/sync architectures and
 
 We run different load tests to find the breaking points of both architectures (sync/async).
 
-* Example 1: Response time: We test the performance application for normal requests (low traffic), getting the rate of requests per second.
-* Example 2: Load test: We test how the application behaves in high traffic times and we find the architectures breaking points.
-* Example 3: Maximum performance: We test the behavior of both architectures in the max point selected in Example 2 during a long period of time.
-* Example 4: Stress test: We test how the application operates in a "stress situation" during a long period of time.
+* **Example 1: Response time:** We test the performance application for normal requests (low traffic), getting the rate of requests per second.
+* **Example 2: Load test:** We test how the application behaves in high traffic times and we find the architectures breaking points.
+* **Example 3: Maximum performance:** We test the behavior of both architectures in the max point selected in Example 2 during a long period of time.
+* **Example 4: Stress test:** We test how the application operates in a "stress situation" during a long period of time.
 
 To do all the examples, we use [Locust](https://locust.io). This is a Python Open Source load testing tool. Using Locust, we can define the load test in Python versionable code. Also, Locust has utilities to explore the results (Web-based UI, HTML reports, and CSV raw files).
 
@@ -178,7 +178,7 @@ To do all the examples, we use [Locust](https://locust.io). This is a Python Ope
 * [Test/CI] Tox
 * [Test/CI] Github Actions, CircleCI
 * [Documentation] Sphinx
-* [Docker] Orchestrate docker images using docker-compose or Kubernetes
+* [Docker] Orchestrate Docker images using Docker-compose, Podman-compose or Kubernetes
 * [Tools] Include [BentoML](https://github.com/bentoml/BentoML) deployment model. They speak about largely increases the overall throughput of the API server (over FastAPI and Flask) using `Batch processing`, not on-demand: https://docs.bentoml.org/en/latest/quickstart.html#hello-world
 
 # Notes
