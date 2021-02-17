@@ -86,7 +86,7 @@ Output:
 
 ![Load Test Sync](../../doc/load_test_sync.png)
 
-Please, check [the complete output report](output/load_test_sync.html).
+Please, check [the complete output report](output/load_test_sync.html) in local or the [html online preview](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/benchmark/experiment3-benchmarking-locust/output/load_test_sync.html).
 
 As you can see, seems as 85 is the max number of simultaneous request POST every second that our Synchronous architecture can manage properly.
 
@@ -106,7 +106,7 @@ Output:
 
 ![Load Test Async](../../doc/load_test_async.png)
 
-Please, check [the complete output report](output/load_test_async.html).
+Please, check [the complete output report](output/load_test_async.html) in local or the [html online preview](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/benchmark/experiment3-benchmarking-locust/output/load_test_async.html).
 
 As you can see, seems as 150 is the max number of simultaneous request POST every second that our Asynchronous architecture can manage properly.
 
@@ -131,7 +131,7 @@ Output:
 
 ![Max Performance Sync](../../doc/max_performance_sync.png)
 
-Please, check [the complete output report](output/max_performance_sync.html).
+Please, check [the complete output report](output/max_performance_sync.html) in local or the [html online preview](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/benchmark/experiment3-benchmarking-locust/output/max_performance_sync.html).
 
 The results are stable and performs as expected.
 
@@ -147,7 +147,7 @@ Output:
 
 ![Max Performance Async](../../doc/max_performance_async.png)
 
-Please, check [the complete output report](output/max_performance_async.html).
+Please, check [the complete output report](output/max_performance_async.html) in local or the [html online preview](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/benchmark/experiment3-benchmarking-locust/output/max_performance_async.html).
 
 The results are stable and performs as expected.
 
@@ -168,9 +168,7 @@ $ locust -f benchmark.py --host http://localhost:5001 --headless --users 500 --s
 
 Output:
 
-![Max Performance Sync](../../doc/stress_test_sync.png)
-
-Please, check [the complete output report](output/stress_test_sync.html).
+Please, check [the complete output report](output/stress_test_sync.html) in local or the [html online preview](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/benchmark/experiment3-benchmarking-locust/output/stress_test_async.html).
 
 The higher the number of requests the longer the response time, however, the ratio of requests per second seems to be stable.
 
@@ -184,9 +182,7 @@ $ locust -f benchmark.py --host http://localhost:8001 --headless --users 500 --s
 
 Output:
 
-![Stress Test Async](../../doc/stress_test_async.png)
-
-Please, check [the complete output report](output/stress_test_async.html).
+Please, check [the complete output report](output/stress_test_async.html) in local or the [html online preview](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/benchmark/experiment3-benchmarking-locust/output/stress_test_sync.html).
 
 The higher the number of requests the longer the response time, however, the ratio of requests per second seems to be stable.
 
