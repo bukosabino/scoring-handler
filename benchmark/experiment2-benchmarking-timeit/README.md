@@ -52,7 +52,7 @@ Output:
 
 ![Plot1](../../doc/benchmarking-timeit.png)
 
-Also, you can explore results using Jupyter Notebook.
+Also, you can explore results using Jupyter Notebook in local or the [html online preview](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/benchmark/experiment2-benchmarking-timeit/output/explore_1_61_10.html)
 
 ```
 jupyter-notebook explore.ipynb
