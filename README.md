@@ -24,6 +24,10 @@ Please, take a look to the architecture images. We use 4 different Docker images
 
 # Deployment
 
+### To keep in mind
+
+In the experiment all the services are executed in local in a single PC. If you want to reproduce the results in a real situation, please, consider to deploy all the services in a distributed environment, you should not share computation or memory between them. We are doing it because `sleep` does not consume a lot of CPU or memory.
+
 ### Prerequisites
 
 * Linux: I have used Ubuntu as OS
@@ -170,16 +174,21 @@ To do all the examples, we use [Locust](https://locust.io). This is a Python Ope
 ### DOING:
 
 * [Communicaton] Prepare a presentation.
+* [Communicaton] Prepare Medium publication.
 
 ### TODO:
 
-* [Settings] Settings management using python type annotations (Pydantic)
+* [Settings] Settings management using Python type annotations (Pydantic)
 * [Test] Include Pytest
 * [Test/CI] Tox
 * [Test/CI] Github Actions, CircleCI
 * [Documentation] Sphinx
-* [Docker] Orchestrate Docker images using Docker-compose, Podman-compose or Kubernetes
+* [Docker] Orchestrate Docker images using Docker-compose, Podman-compose or Kubernetes.
+
+### Future
+
 * [Tools] Include [BentoML](https://github.com/bentoml/BentoML) deployment model. They speak about largely increases the overall throughput of the API server (over FastAPI and Flask) using `Batch processing`, not on-demand: https://docs.bentoml.org/en/latest/quickstart.html#hello-world
+* [Deployment] Because the Scoring Handler API or Models API could be slow processes (a lot of computation when predict, need to talk to databases, call to third party APIs, microservices communication, etc.), we should consider implementing a solution using a FIFO queue, where the backend receives a request from the user, push the job into a queue and replies to the user quickly something as "I’ll do that calculation. It has ID XXX. Please wait". Now, the user can query the backend what is the progress of his task and get the results when it is finished. More info about this topic [here](https://towardsdatascience.com/there-are-two-very-different-ways-to-deploy-ml-models-heres-both-ce2e97c7b9b1).
 
 # Notes
 
