@@ -1,0 +1,6 @@
+# REST API Backend
+Flask==1.1.2
+gunicorn==20.0.4
+
+# Utils
+https://github.com/bukosabino/scoring-handler-utils/archive/release-0.0.5.zip

@@ -1,0 +1,10 @@
+# CLI
+typer==0.3.2
+
+# Profiling
+requests==2.25.1
+pyinstrument==3.3.0
+yappi==1.3.2
+
+# Utils
+https://github.com/bukosabino/scoring-handler-utils/archive/release-0.0.5.zip

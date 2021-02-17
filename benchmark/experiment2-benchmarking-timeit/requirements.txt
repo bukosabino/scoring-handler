@@ -1,0 +1,14 @@
+# Jupyter
+jupyterlab==3.0.7
+plotly==4.14.3
+ipywidgets==7.6.3
+
+# ML libraries
+numpy==1.20.1
+pandas==1.2.1
+
+# CLI
+typer==0.3.2
+
+# API Rest
+requests==2.25.1
