@@ -132,7 +132,7 @@ So, the **configurations are pretty similar** and the **performance is the maxim
 
 ### Hardware specifications
 
-You can check a [complete hardware report](doc/pc_specs.html) generated with `lshw` for the pc where all the profiles and benchmarks are running.
+You can check a [complete hardware report](https://htmlpreview.github.io/?https://github.com/bukosabino/scoring-handler/blob/main/doc/pc_specs.html) generated with `lshw` for the pc where all the profiles and benchmarks are running.
 
 To generate one for your pc:
 
@@ -171,22 +171,10 @@ To do all the examples, we use [Locust](https://locust.io). This is a Python Ope
 
 # Future
 
-### DOING:
-
-* [Communicaton] Prepare a presentation.
-* [Communicaton] Prepare Medium publication.
-
-### TODO:
-
 * [Settings] Settings management using Python type annotations (Pydantic)
-* [Test] Include Pytest
-* [Test/CI] Tox
-* [Test/CI] Github Actions, CircleCI
-* [Documentation] Sphinx
+* [Scalability] Measure scalability (more than 2 models): https://github.com/bukosabino/scoring-handler/issues/2
+* [Monitoriong] Monitoring the payload, ML metrics and the load tests using Prometheus + Grafana
 * [Docker] Orchestrate Docker images using Docker-compose, Podman-compose or Kubernetes.
-
-### Future
-
 * [Tools] Include [BentoML](https://github.com/bentoml/BentoML) deployment model. They speak about largely increases the overall throughput of the API server (over FastAPI and Flask) using `Batch processing`, not on-demand: https://docs.bentoml.org/en/latest/quickstart.html#hello-world
 * [Deployment] Because the Scoring Handler API or Models API could be slow processes (a lot of computation when predict, need to talk to databases, call to third party APIs, microservices communication, etc.), we should consider implementing a solution using a FIFO queue, where the backend receives a request from the user, push the job into a queue and replies to the user quickly something as "I’ll do that calculation. It has ID XXX. Please wait". Now, the user can query the backend what is the progress of his task and get the results when it is finished. More info about this topic [here](https://towardsdatascience.com/there-are-two-very-different-ways-to-deploy-ml-models-heres-both-ce2e97c7b9b1).
 
